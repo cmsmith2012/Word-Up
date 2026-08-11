@@ -6,26 +6,32 @@
 <meta name="theme-color" content="#171717">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Deep Scripture">
-<title>Deep Scripture</title>
+<meta name="apple-mobile-web-app-title" content="Word Up">
+<title>Word Up</title>
 <style>
 :root{--bg:#f7f4ed;--card:#fffdf8;--text:#24231f;--muted:#77736b;--line:#e4dfd4;--accent:#b86b35;--accent2:#5d6f58;--shadow:0 10px 35px rgba(35,30,20,.08)}
-*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif}body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
-button{font:inherit;color:inherit}button:active{transform:scale(.98)}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif}
+body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}button{font:inherit;color:inherit}button:active{transform:scale(.98)}
 .app{max-width:720px;margin:auto}.top{position:sticky;top:0;z-index:10;background:rgba(247,244,237,.92);backdrop-filter:blur(18px);padding:calc(12px + env(safe-area-inset-top)) 18px 12px;border-bottom:1px solid rgba(228,223,212,.7)}
-.toprow{display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:-.03em;font-size:20px}.sub{font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:3px}
-.icon{border:0;background:var(--card);width:40px;height:40px;border-radius:14px;box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.toprow{display:flex;align-items:center;justify-content:space-between}.brand{font-weight:850;letter-spacing:-.04em;font-size:28px}.sub{font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:3px}
+.icon{border:0;background:var(--card);width:46px;height:46px;border-radius:15px;box-shadow:0 3px 12px rgba(0,0,0,.05);font-size:20px}
 main{padding:18px}.hero{padding:8px 2px 18px}.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:800}.hero h1{font-family:Georgia,serif;font-size:34px;line-height:1.05;margin:7px 0}.hero p{color:var(--muted);margin:0;line-height:1.5}
-.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow);margin-bottom:14px}.ref{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2)}.verse{font-family:Georgia,serif;font-size:23px;line-height:1.55;margin:10px 0 15px}.verse:first-letter{font-size:40px;font-weight:700}.actions{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.btn{border:1px solid var(--line);background:#f8f5ee;border-radius:14px;padding:12px 9px;font-size:13px;font-weight:700}.btn.primary{background:var(--text);color:white;border-color:var(--text)}
-.section-title{font-size:13px;font-weight:800;margin:22px 2px 10px}.mini{display:flex;gap:12px;align-items:center;padding:14px 2px;border-bottom:1px solid var(--line)}.mini:last-child{border-bottom:0}.num{width:34px;height:34px;border-radius:11px;background:#eee8dc;display:grid;place-items:center;font-size:12px;font-weight:800}.mini b{font-family:Georgia,serif}.mini span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
-nav{position:fixed;z-index:20;bottom:0;left:0;right:0;background:rgba(255,253,248,.94);backdrop-filter:blur(20px);border-top:1px solid var(--line);padding:8px 10px calc(8px + env(safe-area-inset-bottom));display:flex;justify-content:center}.navin{max-width:720px;width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:5px}.navbtn{border:0;background:none;padding:7px 2px;color:var(--muted);font-size:11px;font-weight:700}.navbtn.active{color:var(--text)}.navbtn div{font-size:20px;margin-bottom:2px}
-.sheet{position:fixed;inset:0;z-index:50;background:rgba(25,23,20,.38);display:none;align-items:flex-end}.sheet.open{display:flex}.panel{background:var(--card);width:100%;max-height:90vh;overflow:auto;border-radius:28px 28px 0 0;padding:12px 20px calc(25px + env(safe-area-inset-bottom));animation:up .2s ease}.handle{width:42px;height:5px;border-radius:5px;background:#d7d0c3;margin:0 auto 18px}.close{float:right;border:0;background:#eee8dc;border-radius:50%;width:34px;height:34px}.panel h2{font-family:Georgia,serif;font-size:29px;margin:8px 0}.panel h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);margin:24px 0 7px}.panel p{line-height:1.6;color:#4e4a43;margin:0}.pillrow{display:flex;gap:7px;overflow:auto;padding:5px 0 2px}.pill{white-space:nowrap;border:1px solid var(--line);background:#f7f3ea;border-radius:99px;padding:9px 12px;font-size:12px;font-weight:700}.search{display:flex;gap:9px;margin:12px 0}.search input{flex:1;border:1px solid var(--line);border-radius:15px;padding:13px 14px;background:var(--card);font-size:15px;outline:none}
-.empty{text-align:center;padding:45px 15px;color:var(--muted)}@keyframes up{from{transform:translateY(100%)}to{transform:translateY(0)}}@media(min-width:700px){.app{box-shadow:0 0 70px rgba(0,0,0,.05);min-height:100vh}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow);margin-bottom:14px}.ref{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2)}
+.verse{font-family:Georgia,serif;font-size:23px;line-height:1.55;margin:10px 0 15px}.verse:first-letter{font-size:40px;font-weight:700}
+.actions{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.btn{border:1px solid var(--line);background:#f8f5ee;border-radius:14px;padding:12px 9px;font-size:13px;font-weight:700}.btn.primary{background:var(--text);color:white;border-color:var(--text)}
+.section-title{font-size:13px;font-weight:800;margin:22px 2px 10px}.mini{display:flex;gap:12px;align-items:center;padding:14px 2px;border-bottom:1px solid var(--line)}.mini:last-child{border-bottom:0}.num{width:34px;height:34px;border-radius:11px;background:#eee8dc;display:grid;place-items:center;font-size:12px;font-weight:800;flex:none}.mini b{font-family:Georgia,serif}.mini span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+nav{position:fixed;z-index:20;bottom:0;left:0;right:0;background:rgba(255,253,248,.94);backdrop-filter:blur(20px);border-top:1px solid var(--line);padding:8px 10px calc(8px + env(safe-area-inset-bottom));display:flex;justify-content:center}
+.navin{max-width:720px;width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:5px}.navbtn{border:0;background:none;padding:7px 2px;color:var(--muted);font-size:11px;font-weight:700}.navbtn.active{color:var(--text)}.navbtn div{font-size:20px;margin-bottom:2px}
+.sheet{position:fixed;inset:0;z-index:50;background:rgba(25,23,20,.38);display:none;align-items:flex-end}.sheet.open{display:flex}.panel{background:var(--card);width:100%;max-height:90vh;overflow:auto;border-radius:28px 28px 0 0;padding:12px 20px calc(25px + env(safe-area-inset-bottom));animation:up .2s ease}.handle{width:42px;height:5px;border-radius:5px;background:#d7d0c3;margin:0 auto 18px}
+.close{float:right;border:0;background:#eee8dc;border-radius:50%;width:34px;height:34px}.panel h2{font-family:Georgia,serif;font-size:29px;margin:8px 0}.panel h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);margin:24px 0 7px}.panel p{line-height:1.6;color:#4e4a43;margin:0}
+.pillrow{display:flex;gap:7px;overflow:auto;padding:5px 0 2px}.pill{white-space:nowrap;border:1px solid var(--line);background:#f7f3ea;border-radius:99px;padding:9px 12px;font-size:12px;font-weight:700}
+.search{display:flex;gap:9px;margin:12px 0}.search input{flex:1;border:1px solid var(--line);border-radius:15px;padding:13px 14px;background:var(--card);font-size:15px;outline:none}.empty{text-align:center;padding:45px 15px;color:var(--muted)}
+@keyframes up{from{transform:translateY(100%)}to{transform:translateY(0)}}@media(min-width:700px){.app{box-shadow:0 0 70px rgba(0,0,0,.05);min-height:100vh}}
 </style>
 </head>
 <body>
 <div class="app">
-<header class="top"><div class="toprow"><div><div class="brand">Deep Scripture</div><div class="sub">Read • Understand • Connect</div></div><button class="icon" onclick="openStudy()">✦</button></div></header>
+<header class="top"><div class="toprow"><div><div class="brand">Word Up</div><div class="sub">Read • Understand • Go Deeper</div></div><button class="icon" onclick="openStudy()">✦</button></div></header>
 <main id="main"></main>
 <nav><div class="navin">
 <button class="navbtn active" onclick="show('read',this)"><div>📖</div>Read</button>
@@ -34,68 +40,159 @@ nav{position:fixed;z-index:20;bottom:0;left:0;right:0;background:rgba(255,253,24
 <button class="navbtn" onclick="show('saved',this)"><div>🔖</div>Saved</button>
 </div></nav>
 </div>
-<div class="sheet" id="sheet" onclick="if(event.target.id==='sheet')closeStudy()"><section class="panel"><div class="handle"></div><button class="close" onclick="closeStudy()">×</button><div id="panel"></div></section></div>
+
+<div class="sheet" id="sheet" onclick="if(event.target.id==='sheet')closeStudy()">
+<section class="panel"><div class="handle"></div><button class="close" onclick="closeStudy()">×</button><div id="panel"></div></section>
+</div>
 
 <script>
-const verses=[
- {ref:"Genesis 1:1",text:"In the beginning God created the heavens and the earth.",book:"Genesis",chapter:1,verse:1,
-  meaning:"The Bible opens with God as the ultimate source of everything that exists. The verse establishes creation, divine initiative, and the distinction between God and the created world.",
-  context:"Genesis 1 speaks into an ancient Near Eastern world filled with competing creation stories. Rather than presenting creation as the result of rival gods fighting, it presents one sovereign God ordering creation by his word.",
-  theology:"This verse establishes a foundational biblical claim: God precedes creation and is its maker. It becomes a starting point for the Bible's theology of creation, God's sovereignty, and humanity's place within the created order.",
-  language:"The Hebrew opening, bereshit bara Elohim, begins with the idea of 'beginning' and uses a verb for creating that is associated in Scripture especially with God's creative work.",
-  related:["John 1:1–3","Psalm 33:6–9","Colossians 1:15–17"]},
- {ref:"Genesis 1:2",text:"The earth was empty and formless, and darkness covered the deep waters. And the Spirit of God was hovering over its surface.",book:"Genesis",chapter:1,verse:2,
-  meaning:"The scene is unformed and unfilled. God's presence is already there before the ordered creation that follows.",
-  context:"Ancient readers commonly imagined the primeval deep as a threatening, unordered watery expanse. Genesis portrays it without giving the waters divine status: God is present and sovereign over the scene.",
-  theology:"The Spirit of God is depicted as present and active at the beginning of creation, contributing to the Bible's broader picture of God's life-giving presence.",
-  language:"The Hebrew ruach can carry the sense of spirit, wind, or breath. Context helps determine the intended nuance here.",
-  related:["Psalm 104:30","John 3:5–8","2 Corinthians 3:17"]},
- {ref:"Genesis 1:3",text:"Then God said, 'Let there be light,' and there was light.",book:"Genesis",chapter:1,verse:3,
-  meaning:"Creation proceeds through God's authoritative word. What God commands comes into being.",
-  context:"Light had deep symbolic importance in the ancient world, but Genesis grounds it first in God's creative authority rather than in a divine sun-god.",
-  theology:"God creates by speaking. The theme of divine speech and light becomes important throughout Scripture and is echoed explicitly in the New Testament.",
-  language:"The Hebrew phrase emphasizes God's speech followed by the fulfillment of his command.",
-  related:["Psalm 33:9","John 1:4–9","2 Corinthians 4:6"]}
+const verses = [
+  {
+    ref:"Genesis 1:1", text:"In the beginning God created the heavens and the earth.",
+    book:"Genesis", chapter:1, verse:1,
+    author:"Genesis does not name its human author. Jewish and Christian tradition has historically associated Genesis and the rest of the Pentateuch with Moses. Modern scholarship commonly understands Genesis as the result of a long process of composition and preservation involving older traditions and sources. The app will distinguish traditional attribution from scholarly theories rather than presenting a debated question as settled fact.",
+    audience:"Genesis was preserved for the people of Israel. Its opening chapters establish foundational truths about God, creation, humanity, sin, and God's purposes. For an ancient Israelite audience, the creation account also spoke into a world surrounded by other ancient Near Eastern creation traditions.",
+    meaning:"The Bible opens with God as the ultimate source of everything that exists. The verse establishes creation, divine initiative, and the distinction between God and the created world.",
+    context:"Genesis 1 speaks into an ancient Near Eastern world filled with competing creation stories. Rather than presenting creation as the result of rival gods fighting, it presents one sovereign God ordering creation by his word.",
+    theology:"This verse establishes a foundational biblical claim: God precedes creation and is its maker. It becomes a starting point for the Bible's theology of creation, God's sovereignty, and humanity's place within the created order.",
+    language:"The Hebrew opening, bereshit bara Elohim, begins with the idea of 'beginning' and uses a verb for creating that is associated in Scripture especially with God's creative work.",
+    related:["John 1:1–3","Psalm 33:6–9","Colossians 1:15–17"]
+  },
+  {
+    ref:"Genesis 1:2", text:"The earth was empty and formless, and darkness covered the deep waters. And the Spirit of God was hovering over its surface.",
+    book:"Genesis", chapter:1, verse:2,
+    author:"Genesis does not identify its human author by name. The traditional Mosaic attribution and modern source/compositional theories will be presented separately in the full study system.",
+    audience:"The original Israelite audience would have heard this account against the backdrop of the ancient Near East, where stories about primordial waters and cosmic order were familiar.",
+    meaning:"The scene is unformed and unfilled. God's presence is already there before the ordered creation that follows.",
+    context:"Ancient readers commonly imagined the primeval deep as a threatening, unordered watery expanse. Genesis portrays it without giving the waters divine status: God is present and sovereign over the scene.",
+    theology:"The Spirit of God is depicted as present and active at the beginning of creation, contributing to the Bible's broader picture of God's life-giving presence.",
+    language:"The Hebrew ruach can carry the sense of spirit, wind, or breath. Context helps determine the intended nuance here.",
+    related:["Psalm 104:30","John 3:5–8","2 Corinthians 3:17"]
+  },
+  {
+    ref:"Genesis 1:3", text:"Then God said, 'Let there be light,' and there was light.",
+    book:"Genesis", chapter:1, verse:3,
+    author:"The human author is not named within Genesis. Traditional and modern views about authorship will be clearly separated in the full app.",
+    audience:"The passage was preserved for Israel and would have taught its audience to understand creation in terms of the authority of the one true God rather than competing deities.",
+    meaning:"Creation proceeds through God's authoritative word. What God commands comes into being.",
+    context:"Light had deep symbolic importance in the ancient world, but Genesis grounds it first in God's creative authority rather than in a divine sun-god.",
+    theology:"God creates by speaking. The theme of divine speech and light becomes important throughout Scripture and is echoed explicitly in the New Testament.",
+    language:"The Hebrew wording emphasizes God's speech followed by the fulfillment of his command.",
+    related:["Psalm 33:9","John 1:4–9","2 Corinthians 4:6"]
+  }
 ];
 
-let current=0;
-function saveState(){localStorage.setItem('ds-current',current);localStorage.setItem('ds-saved',JSON.stringify(saved))}
-let saved=JSON.parse(localStorage.getItem('ds-saved')||'[]');
-current=+localStorage.getItem('ds-current')||0;
+let current = 0;
+let saved = [];
+try { saved = JSON.parse(localStorage.getItem('wordup-saved') || '[]'); } catch(e) { saved = []; }
+current = Number(localStorage.getItem('wordup-current') || 0);
+if (!Number.isInteger(current) || current < 0 || current >= verses.length) current = 0;
+
+function saveState(){
+  try {
+    localStorage.setItem('wordup-current', String(current));
+    localStorage.setItem('wordup-saved', JSON.stringify(saved));
+  } catch(e) {}
+}
 
 function renderRead(){
- const v=verses[current];
- document.getElementById('main').innerHTML=`<div class="hero"><div class="eyebrow">Continue reading</div><h1>${v.book} ${v.chapter}</h1><p>A verse-by-verse reading experience designed to help you slow down and understand the text.</p></div>
- <div class="card"><div class="ref">${v.ref}</div><div class="verse">${v.text}</div><div class="actions"><button class="btn primary" onclick="openStudy()">Deep Study</button><button class="btn" onclick="toggleSave()">🔖 ${saved.includes(current)?'Saved':'Save'}</button></div></div>
- <div class="section-title">Keep reading</div>
- <div class="card">${verses.map((x,i)=>`<div class="mini" onclick="selectVerse(${i})"><div class="num">${x.verse}</div><div><b>${x.ref}</b><span>${x.text}</span></div></div>`).join('')}</div>`;
+  const v = verses[current];
+  const list = verses.map(function(x,i){
+    return '<div class="mini" onclick="selectVerse('+i+')"><div class="num">'+x.verse+'</div><div><b>'+x.ref+'</b><span>'+x.text+'</span></div></div>';
+  }).join('');
+  document.getElementById('main').innerHTML =
+    '<div class="hero"><div class="eyebrow">Continue reading</div><h1>'+v.book+' '+v.chapter+'</h1><p>A verse-by-verse reading experience designed to help you slow down and understand the text.</p></div>'+
+    '<div class="card"><div class="ref">'+v.ref+'</div><div class="verse">'+v.text+'</div><div class="actions">'+
+    '<button class="btn primary" onclick="openStudy()">Deep Study</button>'+
+    '<button class="btn" onclick="toggleSave()">🔖 '+(saved.includes(current)?'Saved':'Save')+'</button></div></div>'+
+    '<div class="section-title">Keep reading</div><div class="card">'+list+'</div>';
 }
-function selectVerse(i){current=i;saveState();renderRead()}
-function toggleSave(){saved=saved.includes(current)?saved.filter(x=>x!==current):[...saved,current];saveState();renderRead()}
+
+function selectVerse(i){ current=i; saveState(); renderRead(); }
+
+function toggleSave(){
+  if(saved.includes(current)) saved=saved.filter(function(x){return x!==current;});
+  else saved.push(current);
+  saveState();
+  renderRead();
+}
+
 function openStudy(){
- const v=verses[current];
- document.getElementById('panel').innerHTML=`<div class="eyebrow">${v.ref}</div><h2>Deep Study</h2><div class="pillrow"><span class="pill">Meaning</span><span class="pill">Context</span><span class="pill">History</span><span class="pill">Culture</span><span class="pill">Theology</span><span class="pill">Language</span></div>
- <h3>Scripture</h3><p style="font-family:Georgia,serif;font-size:20px;color:var(--text)">${v.text}</p>
- <h3>What does it mean?</h3><p>${v.meaning}</p>
- <h3>Historical & cultural context</h3><p>${v.context}</p>
- <h3>Theology</h3><p>${v.theology}</p>
- <h3>Original language</h3><p>${v.language}</p>
- <h3>Related passages</h3><p>${v.related.join(' • ')}</p>`;
- document.getElementById('sheet').classList.add('open');
+  const v=verses[current];
+  const related=v.related.join(' • ');
+  document.getElementById('panel').innerHTML =
+    '<div class="eyebrow">'+v.ref+'</div><h2>Deep Study</h2>'+
+    '<div class="pillrow"><span class="pill">Author</span><span class="pill">Audience</span><span class="pill">Context</span><span class="pill">History</span><span class="pill">Culture</span><span class="pill">Theology</span><span class="pill">Language</span></div>'+
+    '<h3>Scripture</h3><p style="font-family:Georgia,serif;font-size:20px;color:var(--text)">'+v.text+'</p>'+
+    '<h3>Author</h3><p>'+v.author+'</p>'+
+    '<h3>Audience</h3><p>'+v.audience+'</p>'+
+    '<h3>What does it mean?</h3><p>'+v.meaning+'</p>'+
+    '<h3>Historical & cultural context</h3><p>'+v.context+'</p>'+
+    '<h3>Theology</h3><p>'+v.theology+'</p>'+
+    '<h3>Original language</h3><p>'+v.language+'</p>'+
+    '<h3>Related passages</h3><p>'+related+'</p>';
+  document.getElementById('sheet').classList.add('open');
 }
-function closeStudy(){document.getElementById('sheet').classList.remove('open')}
+
+function closeStudy(){ document.getElementById('sheet').classList.remove('open'); }
+
 function show(type,el){
- document.querySelectorAll('.navbtn').forEach(x=>x.classList.remove('active'));el.classList.add('active');
- if(type==='read'){renderRead();return}
- if(type==='discover'){document.getElementById('main').innerHTML=`<div class="hero"><div class="eyebrow">Discover</div><h1>Go deeper.</h1><p>Explore the world behind the text—people, places, culture, history, language, and theology.</p></div><div class="card"><div class="ref">Featured study</div><h2 style="font-family:Georgia,serif">Why does Genesis begin with creation?</h2><p style="color:var(--muted);line-height:1.5">Explore Genesis 1 in its ancient Near Eastern setting and trace the Bible's theology of creation.</p><button class="btn primary" style="margin-top:12px;width:100%" onclick="selectVerse(0);openStudy()">Explore Genesis 1:1</button></div><div class="section-title">Coming soon</div><div class="card"><div class="mini"><div class="num">🏺</div><div><b>Culture</b><span>What did daily life look like in biblical times?</span></div></div><div class="mini"><div class="num">✍︎</div><div><b>People</b><span>Meet the authors, kings, prophets, apostles, and ordinary people of Scripture.</span></div></div><div class="mini"><div class="num">🗺</div><div><b>Places</b><span>See where biblical events happened and why geography matters.</span></div></div></div>`}
- if(type==='search'){document.getElementById('main').innerHTML=`<div class="hero"><div class="eyebrow">Search</div><h1>Find anything.</h1><p>Search Scripture, passages, people, places, themes, and study topics.</p></div><div class="search"><input id="q" placeholder="Try “creation” or “Genesis 1:1”" oninput="doSearch()"></div><div id="results"></div>`;doSearch()}
- if(type==='saved'){document.getElementById('main').innerHTML=`<div class="hero"><div class="eyebrow">Your library</div><h1>Saved verses.</h1><p>Your bookmarks stay on this device.</p></div>${saved.length?`<div class="card">${saved.map(i=>{let v=verses[i];return `<div class="mini" onclick="selectVerse(${i})"><div class="num">🔖</div><div><b>${v.ref}</b><span>${v.text}</span></div></div>`}).join('')}</div>`:'<div class="empty">No saved verses yet.<br>Tap 🔖 while reading to save one.</div>'}
+  document.querySelectorAll('.navbtn').forEach(function(x){x.classList.remove('active');});
+  el.classList.add('active');
+
+  if(type==='read'){ renderRead(); return; }
+
+  if(type==='discover'){
+    document.getElementById('main').innerHTML =
+      '<div class="hero"><div class="eyebrow">Discover</div><h1>Go deeper.</h1><p>Explore the world behind the text—people, places, culture, history, language, and theology.</p></div>'+
+      '<div class="card"><div class="ref">Featured study</div><h2 style="font-family:Georgia,serif">Why does Genesis begin with creation?</h2><p style="color:var(--muted);line-height:1.5">Explore Genesis 1 in its ancient Near Eastern setting and trace the Bible’s theology of creation.</p><button class="btn primary" style="margin-top:12px;width:100%" onclick="selectVerse(0);openStudy()">Explore Genesis 1:1</button></div>'+
+      '<div class="section-title">Coming soon</div><div class="card">'+
+      '<div class="mini"><div class="num">🏺</div><div><b>Culture</b><span>What did daily life look like in biblical times?</span></div></div>'+
+      '<div class="mini"><div class="num">✍︎</div><div><b>People</b><span>Meet the authors, kings, prophets, apostles, and ordinary people of Scripture.</span></div></div>'+
+      '<div class="mini"><div class="num">🗺</div><div><b>Places</b><span>See where biblical events happened and why geography matters.</span></div></div></div>';
+    return;
+  }
+
+  if(type==='search'){
+    document.getElementById('main').innerHTML =
+      '<div class="hero"><div class="eyebrow">Search</div><h1>Find anything.</h1><p>Search Scripture, people, places, themes, and study topics.</p></div>'+
+      '<div class="search"><input id="q" placeholder="Try “creation” or “Genesis 1:1”" oninput="doSearch()"></div><div id="results"></div>';
+    doSearch();
+    return;
+  }
+
+  if(type==='saved'){
+    if(!saved.length){
+      document.getElementById('main').innerHTML='<div class="hero"><div class="eyebrow">Your library</div><h1>Saved verses.</h1><p>Your bookmarks stay on this device.</p></div><div class="empty">No saved verses yet.<br>Tap 🔖 while reading to save one.</div>';
+      return;
+    }
+    const items=saved.map(function(i){
+      const v=verses[i];
+      return '<div class="mini" onclick="selectVerse('+i+')"><div class="num">🔖</div><div><b>'+v.ref+'</b><span>'+v.text+'</span></div></div>';
+    }).join('');
+    document.getElementById('main').innerHTML='<div class="hero"><div class="eyebrow">Your library</div><h1>Saved verses.</h1><p>Your bookmarks stay on this device.</p></div><div class="card">'+items+'</div>';
+  }
 }
+
 function doSearch(){
- const q=(document.getElementById('q')?.value||'').toLowerCase().trim(), r=document.getElementById('results');if(!r)return;
- const found=verses.filter(v=>(v.ref+' '+v.text+' '+v.meaning+' '+v.context+' '+v.theology+' '+v.language).toLowerCase().includes(q));
- r.innerHTML=found.length?`<div class="card">${found.map(v=>`<div class="mini" onclick="selectVerse(${verses.indexOf(v)})"><div class="num">${v.verse}</div><div><b>${v.ref}</b><span>${v.text}</span></div></div>`).join('')}</div>`:`<div class="empty">No matches yet.</div>`;
+  const input=document.getElementById('q');
+  const results=document.getElementById('results');
+  if(!input || !results) return;
+  const q=input.value.toLowerCase().trim();
+  const found=verses.filter(function(v){
+    return (v.ref+' '+v.text+' '+v.author+' '+v.audience+' '+v.meaning+' '+v.context+' '+v.theology+' '+v.language).toLowerCase().includes(q);
+  });
+  if(!found.length){
+    results.innerHTML='<div class="empty">No matches yet.</div>';
+    return;
+  }
+  const items=found.map(function(v){
+    const i=verses.indexOf(v);
+    return '<div class="mini" onclick="selectVerse('+i+')"><div class="num">'+v.verse+'</div><div><b>'+v.ref+'</b><span>'+v.text+'</span></div></div>';
+  }).join('');
+  results.innerHTML='<div class="card">'+items+'</div>';
 }
+
 renderRead();
 </script>
 </body>
